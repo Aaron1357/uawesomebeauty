@@ -17,7 +17,7 @@ export default function Header() {
           </div>
           
           <div className="menu-holder">
-            <div className="menu"> reservation </div>     {/*메뉴 3 */}
+            <div className="menu"> Reservation </div>     {/*메뉴 3 */}
           </div>
           <div className="menu-holder">
             <div className="menu"> QnA </div>     {/*메뉴 4 */} 
@@ -35,7 +35,7 @@ export default function Header() {
 
             display:flex;
              
-            background-color: seashell;
+            background-color: lavenderblush;
             width:100vw;
             height:11vh;
             margin-left:-9px;
@@ -43,13 +43,13 @@ export default function Header() {
             
           }
           .Logo-holder {
-             padding-left: 600px;
-             padding-right: 400px;
+             padding-left: 500px;
+             padding-right: 300px;
           }
           .Logo {
             
-            width: 220px;
-            height:130px;
+            width: 190px;
+            height:110px;
           }
 
           .menu-holder{
@@ -60,8 +60,14 @@ export default function Header() {
           }
 
           .menu{
-           font-size: 25px;
-           
+           font-size: 22px;
+           color: black;
+
+           &:hover {
+            color: red;
+            opacity: 0.5;
+            transition: color 0.5s; 
+          }
           }
         `}
         </style>
