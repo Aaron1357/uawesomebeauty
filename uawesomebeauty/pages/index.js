@@ -49,12 +49,13 @@ const Index = () => {
 
       <style jsx global>{`
         .mainPhoto {
-          max-height: 89vh;
+          max-height: 89%;
           width: 100%;
-          height: 100%;
+          height: 89%;
           position: absolute;
           transition: opacity 0.5s; /* 투명도에 0.5초 동안의 트랜지션 적용 */
           margin-left: -8px;
+          
         }
       `}</style>
     </div>

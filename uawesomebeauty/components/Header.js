@@ -36,10 +36,10 @@ export default function Header() {
             display:flex;
              
             background-color: lavenderblush;
-            width:100vw;
-            height:11vh;
-            margin-left:-9px;
-            margin-top: -8px;  
+            width:100%;
+            height:11%;
+          
+             
             
           }
           .Logo-holder {
