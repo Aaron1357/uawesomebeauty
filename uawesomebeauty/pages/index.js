@@ -39,9 +39,66 @@ const Index = () => {
           <img className="mainPhoto" src={images[nextImageIndex]} />
         </div>
         <div>
-          <p className="customText">
-            여기에 텍스트를 작성할 수 있습니다. 원하는 내용을 입력하세요.
-          </p>
+          <p className="customText"></p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1>오시는 길</h1>
+          <div>지하철역과 아주 가깝습니다!</div>
+          <div className="root">
+            <div>
+              <br></br>지도 부분
+            </div>
+            <div>
+              <div className="mapbutton">
+                <img src="카카오맵.png" />
+                <img src="네이버지도.png" />
+              </div>
+              <div>
+                <div className="shopname">유어썸뷰티</div>
+                <div>경기 의정부시 용민로 10 탑석자이정문상가 205-2호</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -53,7 +110,28 @@ const Index = () => {
           position: absolute;
           transition: opacity 0.5s; /* 투명도에 0.5초 동안의 트랜지션 적용 */
           margin-left: -8px;
-          
+        }
+
+        .root {
+          display: flex;
+        }
+
+        .mapbutton {
+          display: flex;
+        }
+
+        .mapbutton img {
+          height: 40px;
+          border-radius: 10px; /* 둥글게 만들기 */
+          margin: 10px; /* 이미지 사이의 간격 조절 */
+          &:hover {
+            color: red;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+          }
+        }
+        .shopname {
+          font-weight: bold;
         }
       `}</style>
     </div>
