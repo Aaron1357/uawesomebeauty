@@ -33,7 +33,7 @@ const Index = () => {
 
   return (
     <div>
-      <div>
+      <div className="img-con">
         <img className="mainPhoto" src={images[currentImageIndex]} />
         <img className="mainPhoto" src={images[nextImageIndex]} />
       </div>
@@ -42,21 +42,33 @@ const Index = () => {
           <br></br>
           <br></br>
           <br></br>
-          문의 방법 dwqdwq dwqdwqqwd
+          문의 방법 
           <div />
         </div>
       </div>
-
+   
       <style jsx global>{`
+
+      html,body{
+
+        margin : 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+      }
+
+      
         .mainPhoto {
           max-height: 89%;
           width: 100%;
           height: 89%;
           position: absolute;
           transition: opacity 0.5s; /* 투명도에 0.5초 동안의 트랜지션 적용 */
-          margin-left: -8px;
+          
+          margin-top: 110px;  /* 헤더가 fixed 돼서 마진 안주면 말려올라가용 */
           
         }
+       
       `}</style>
     </div>
   );

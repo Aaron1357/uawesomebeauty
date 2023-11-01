@@ -28,20 +28,22 @@ export default function Header() {
         </div>
   
 
-        <style jsx global>{`
+       <style jsx global>{`
+        body {
+          margin: 0;
+          padding: 0;
+        }
 
+        .main-head {
+          display: flex;
+          background-color: lavenderblush;
+          width: 100%;
+          height: 11%;
+          position: fixed; /* 헤더를 고정시킴 */    
+          top: 0; /* 화면 상단에 고정 */
+          z-index: 1000; /* 다른 콘텐츠 위에 표시 */
+        }
 
-          .main-head {
-
-            display:flex;
-             
-            background-color: lavenderblush;
-            width:100%;
-            height:11%;
-         
-             
-            
-          }
           .Logo-holder {
              padding-left: 500px;
              padding-right: 300px;
