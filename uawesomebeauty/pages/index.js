@@ -49,7 +49,7 @@ const Index = () => {
 
       <style jsx global>{`
         .mainPhoto {
-          max-height: 100vh;
+          max-height: 89vh;
           width: 100%;
           height: 100%;
           position: absolute;
