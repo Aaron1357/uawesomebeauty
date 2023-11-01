@@ -38,8 +38,7 @@ const Index = () => {
           <img className="mainPhoto" src={images[currentImageIndex]} />
           <img className="mainPhoto" src={images[nextImageIndex]} />
         </div>
-        <div>
-          <p className="customText"></p>
+        <div className="howtocome">
           <br />
           <br />
           <br />
@@ -109,9 +108,15 @@ const Index = () => {
           height: 89%;
           position: absolute;
           transition: opacity 0.5s; /* 투명도에 0.5초 동안의 트랜지션 적용 */
-          margin-left: -8px;
+
+          margin-top: 110px;
         }
 
+        .howtocome {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         .root {
           display: flex;
         }
