@@ -34,16 +34,14 @@ const Index = () => {
   return (
     <div>
       <div>
-        <img className="mainPhoto" src={images[currentImageIndex]} />
-        <img className="mainPhoto" src={images[nextImageIndex]} />
-      </div>
-      <div>
         <div>
-          <br></br>
-          <br></br>
-          <br></br>
-          문의 방법 dwqdwq dwqdwqqwd
-          <div />
+          <img className="mainPhoto" src={images[currentImageIndex]} />
+          <img className="mainPhoto" src={images[nextImageIndex]} />
+        </div>
+        <div>
+          <p className="customText">
+            여기에 텍스트를 작성할 수 있습니다. 원하는 내용을 입력하세요.
+          </p>
         </div>
       </div>
 
