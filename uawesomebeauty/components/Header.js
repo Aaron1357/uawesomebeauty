@@ -38,7 +38,7 @@ export default function Header() {
             background-color: lavenderblush;
             width:100%;
             height:11%;
-          
+         
              
             
           }
