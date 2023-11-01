@@ -64,7 +64,6 @@ const Index = () => {
           height: 89%;
           position: absolute;
           transition: opacity 0.5s; /* 투명도에 0.5초 동안의 트랜지션 적용 */
-          
           margin-top: 110px;  /* 헤더가 fixed 돼서 마진 안주면 말려올라가용 */
           
         }
