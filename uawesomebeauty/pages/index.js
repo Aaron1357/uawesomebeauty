@@ -87,9 +87,6 @@ const Index = () => {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
 
           <div className="QnA-con">
            
@@ -195,7 +192,7 @@ const Index = () => {
           background: mistyrose;
          
           width: 100vw;
-          height: 100vh;
+          height: 50vh;
           display: flex;
           flex-direction: column;
           align-items: center;
