@@ -27,18 +27,25 @@ const Index = () => {
 
 
   const handleContactImageClick1 = () => {
-    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");   // 문의 관련 코드 
+    window.open("https://open.kakao.com/o/sXWLm5Pf", "_blank");   // 문의 링크 관련 코드 
   };
   
   const handleContactImageClick2 = () => {
-    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");  // 문의 관련 코드
+    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");  // 문의 링크 관련 코드
   };
   
   const handleContactImageClick3 = () => {
-    window.open("https://talk.naver.com/ct/w4022r?frm=mnmb&frm=nmb_lpn#nafullscreen", "_blank");    // 문의 관련 코드
+    window.open("https://talk.naver.com/ct/w4022r?frm=mnmb&frm=nmb_lpn#nafullscreen", "_blank");    // 문의 링크 관련 코드
   };
 
+  const handleContactImageClick4 = () => {
+    window.open("https://kko.to/HuOyG6LutS", "_blank");    // 카카오맵 링크 관련 코드
+  };
+  const handleContactImageClick5 = () => {
+    window.open("https://naver.me/5Y1I47Yk", "_blank");    // 네이버지도 링크 관련 코드
+  };
 
+  https://kko.to/5FGA0BbCLs
   useEffect(() => {        // 카카오 스크립트
     const kakaoMapScript = document.createElement("script");
     kakaoMapScript.async = false;
@@ -79,6 +86,11 @@ const Index = () => {
           <br />
           <br />
           <br />
+          
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
           <br />
           <br />
@@ -111,7 +123,7 @@ const Index = () => {
 
           <div className="QnA-con">
            
-           <h1 className="QnA-index">| 문의 방법 |</h1>
+           <h1 className="QnA-index">|  Q & A  |</h1>
            <div className="QnA-welcome1"> 궁금하신 모든 사항은 편하게 문의주세요! </div>
            <div className="QnA-welcome2"> 아래의 여러가지 문의 방법을 소개 드립니다. </div>
 
@@ -119,8 +131,8 @@ const Index = () => {
           <div className="QnA-list">
 
           <div className="contact-index">
-          <img className="QnA-img" src="/how-to-contact--1.png" />
-          <h3>전화 및 문자 문의</h3>
+          <img className="QnA-img" src="/how-to-contact--1.png" /> 
+          <h3>0507-1318-5745</h3>
           </div>
           
           <div className="contact-index">
@@ -142,24 +154,25 @@ const Index = () => {
 
            
           </div>
-
-          <h1>오시는 길</h1>
-          <div>지하철역과 아주 가깝습니다!</div>
+        <div className="map-con">
+        <h1 className="QnA-index">| Location |</h1>
+          {/* <div> </div> */}
           <div className="root">
             <div>
               <div id="map" style={{ width: "400px", height: "300px" }}></div>
             </div>
             <div>
               <div className="mapbutton">
-                <img src="카카오맵.png" />
-                <img src="네이버지도.png" />
+                <img src="카카오맵.png"   onClick={handleContactImageClick4}/>
+                <img src="네이버지도.png"  onClick={handleContactImageClick5} />
               </div>
-              <div>
-                <div className="shopname">유어썸뷰티</div>
+              <div className="shopname-index">
+                <div className="shopname">유어썸뷰티</div> <br></br>
                 <div>경기 의정부시 용민로 10 탑석자이정문상가 205-2호</div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <style jsx global>{`
@@ -192,8 +205,13 @@ const Index = () => {
         }
         .root {
           display: flex;
+          flex-direction: column;
+          align-items: center;
+          
         }
         .mapbutton {
+          padding-top: 70px;
+          padding-bottom: 30px;
           display: flex;
         }
         .mapbutton img {
@@ -215,7 +233,7 @@ const Index = () => {
           background: mistyrose;
          
           width: 100vw;
-          height: 50vh;
+          height: 89vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -252,12 +270,13 @@ const Index = () => {
         }
         .QnA-welcome2{
            padding-top : 10px;
-           padding-bottom: 70px;
+           padding-bottom: 130px;
            font-weight:bold;
            font-family: Elice;
         }
         .QnA-index{
           font-family: Elice;
+          padding-bottom: 60px;
         }
         .contact-index{
           word-break;
@@ -265,6 +284,18 @@ const Index = () => {
           text-align: center;
           flex-direction: column;
           font-family: Elice-light;
+        }
+        .map-con{
+ 
+           display: flex;
+           flex-direction:column;
+           align-items: center;
+           justify-content: center;
+           height: 89vh;
+        }
+        .shopname-index{
+          font-family:Elice;
+          text-align: center;
         }
       `}</style>
     </div>
