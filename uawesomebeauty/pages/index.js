@@ -31,6 +31,27 @@ const Index = () => {
     };
   }, [nextImageIndex]);
 
+  useEffect(() => {
+    const kakaoMapScript = document.createElement("script");
+    kakaoMapScript.async = false;
+    kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=b8a7199c97ab09d827a105e52849c736&autoload=false`;
+    document.head.appendChild(kakaoMapScript);
+
+    const onLoadKakaoAPI = () => {
+      window.kakao.maps.load(() => {
+        var container = document.getElementById("map");
+        var options = {
+          center: new window.kakao.maps.LatLng(37.731412, 127.082609),
+          level: 5,
+        };
+
+        var map = new window.kakao.maps.Map(container, options);
+      });
+    };
+
+    kakaoMapScript.addEventListener("load", onLoadKakaoAPI);
+  }, []);
+
   return (
     <div>
       <div>
@@ -81,11 +102,13 @@ const Index = () => {
           <br />
           <br />
           <br />
+          <br />
+          <br />
           <h1>오시는 길</h1>
           <div>지하철역과 아주 가깝습니다!</div>
           <div className="root">
             <div>
-              <br></br>지도 부분
+              <div id="map" style={{ width: "400px", height: "300px" }}></div>
             </div>
             <div>
               <div className="mapbutton">
