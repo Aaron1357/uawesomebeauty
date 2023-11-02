@@ -45,6 +45,8 @@ const Index = () => {
     window.open("https://naver.me/5Y1I47Yk", "_blank");    // 네이버지도 링크 관련 코드
   };
 
+
+
   https://kko.to/5FGA0BbCLs
   useEffect(() => {        // 카카오 스크립트
     const kakaoMapScript = document.createElement("script");
