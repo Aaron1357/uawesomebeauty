@@ -27,18 +27,38 @@ const Index = () => {
 
 
   const handleContactImageClick1 = () => {
-    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");
+    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");   // 문의 관련 코드 
   };
   
   const handleContactImageClick2 = () => {
-    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");
+    window.open("https://instagram.com/uawesomebeauty?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr", "_blank");  // 문의 관련 코드
   };
   
   const handleContactImageClick3 = () => {
-    window.open("https://talk.naver.com/ct/w4022r?frm=mnmb&frm=nmb_lpn#nafullscreen", "_blank");
+    window.open("https://talk.naver.com/ct/w4022r?frm=mnmb&frm=nmb_lpn#nafullscreen", "_blank");    // 문의 관련 코드
   };
 
 
+  useEffect(() => {        // 카카오 스크립트
+    const kakaoMapScript = document.createElement("script");
+    kakaoMapScript.async = false;
+    kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=b8a7199c97ab09d827a105e52849c736&autoload=false`;
+    document.head.appendChild(kakaoMapScript);
+
+    const onLoadKakaoAPI = () => {
+      window.kakao.maps.load(() => {
+        var container = document.getElementById("map");
+        var options = {
+          center: new window.kakao.maps.LatLng(37.731412, 127.082609),
+          level: 5,
+        };
+
+        var map = new window.kakao.maps.Map(container, options);
+      });
+    };
+
+    kakaoMapScript.addEventListener("load", onLoadKakaoAPI);
+  }, []);
 
   return (
     <div>
@@ -48,6 +68,7 @@ const Index = () => {
           <img className="mainPhoto" src={images[nextImageIndex]} />
         </div>
         <div className="howtocome">
+
           <br />
           <br />
           <br />
@@ -126,7 +147,7 @@ const Index = () => {
           <div>지하철역과 아주 가깝습니다!</div>
           <div className="root">
             <div>
-              <br></br>지도 부분
+              <div id="map" style={{ width: "400px", height: "300px" }}></div>
             </div>
             <div>
               <div className="mapbutton">
@@ -160,8 +181,10 @@ const Index = () => {
           height: 89%;
           position: absolute;
           transition: opacity 0.5s; /* 투명도에 0.5초 동안의 트랜지션 적용 */
-         
+
+          margin-top: 110px;
         }
+
         .howtocome {
           display: flex;
           flex-direction: column;
