@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 const images = ["/place1.png", "/place2.png"]; // 이미지 파일 경로 배열
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -130,7 +131,7 @@ const Index = () => {
            <div className="QnA-welcome2"> 아래의 여러가지 문의 방법을 소개 드립니다. </div>
 
            
-          <div className="QnA-list">
+          <div className="QnA-list" id="QnA-sec">
 
           <div className="contact-index">
           <img className="QnA-img" src="/how-to-contact--1.png" /> 
@@ -156,8 +157,8 @@ const Index = () => {
 
            
           </div>
-        <div className="map-con">
-        <h1 className="QnA-index">| Location |</h1>
+        <div className="map-con" id="map-sec">
+         <h1 className="QnA-index">| Location |</h1>
           {/* <div> </div> */}
           <div className="root">
             <div>
@@ -175,6 +176,42 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+
+
+
+        <div className="inner-fac-con" id="inner-sec">
+          <h1 className="fac-index">|  Gallary  |</h1>
+          <div className="fac-welcome1"> 1:1 맞춤 디자인 작업으로 고객님들의 스타일을 찾아드립니다. </div>
+          <div className="fac-welcome2"> 원하는 사진 위에 마우스를 올리면 사진이 확대됩니다. </div>
+          <table class="image-table">
+    <tr>
+      <td><img className="fac-img" src="/1.jpg" alt="이미지 1"/></td>
+      <td><img className="fac-img" src="/2.jpg" alt="이미지 1"/></td>
+      <td><img className="fac-img" src="/3.jpg" alt="이미지 1"/></td>
+    
+      
+    </tr>
+    <tr>
+    <td><img className="fac-img" src="/4.jpg" alt="이미지 1"/></td>
+      <td><img className="fac-img" src="/5.jpg" alt="이미지 1"/></td>
+      <td><img className="fac-img" src="/6.jpg" alt="이미지 1"/></td>
+      
+    </tr>
+    <tr>
+    <td><img className="fac-img" src="/7.jpg" alt="이미지 1"/></td>
+      <td><img className="fac-img" src="/8.jpg" alt="이미지 1"/></td>
+      <td><img className="fac-img" src="/9.jpg" alt="이미지 1"/></td>
+     
+    </tr>
+   
+  </table>
+        </div>
+
+
+
+
+
         </div>
       </div>
       <style jsx global>{`
@@ -299,6 +336,49 @@ const Index = () => {
           font-family:Elice;
           text-align: center;
         }
+        .fac-index{
+          padding-top: 30px;
+          font-family: Elice;
+          padding-bottom: 60px;
+        }
+        .inner-fac-con {
+          
+          padding-top: 100px;
+          background: white;
+          width: 100vw;
+          height: 89vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          
+        }
+
+        .fac-welcome1{
+           padding-top : 0px;
+           padding-bottom: 20px;
+          
+           font-family: Elice-light;
+           
+        }
+        .fac-welcome2{
+           padding-top : 10px;
+           padding-bottom: 70px;
+        
+           font-family: Elice-light;
+        }
+       
+        .fac-img {
+          width: 150px; /* 이미지의 너비를 200px로 설정 */
+          height: 150px; /* 이미지의 높이를 200px로 설정 */ 
+          padding : 7px;
+          border-radius: 10%;
+          &:hover {
+            
+            transform: scale( 2.0, 2.0 ) ;
+            transition: transform 0.5s ease;
+          }
+  }
       `}</style>
     </div>
   );
