@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 export default function Header() {
   return (
     <div>
@@ -6,19 +7,65 @@ export default function Header() {
           <img src="/Logo.png" className="Logo" /> {/*로고 이미지 */}
         </div>
         <div className="menu-holder">
-          <div className="menu"> Location </div> {/*메뉴 1 */}
+          <Link
+            to="us-con" // 섹션의 ID를 여기에 입력
+            spy={true}
+            smooth={true}
+            offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
+            duration={500}
+          >
+            <div className="menu"> About us </div>
+          </Link>
+          {/* <div className="menu"> About us </div> 메뉴 1 */}
         </div>
         <div className="menu-holder">
-          <div className="menu"> About us </div> {/*메뉴 2 */}
+          <Link
+            to="inner-sec" // 섹션의 ID를 여기에 입력
+            spy={true}
+            smooth={true}
+            offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
+            duration={500}
+          >
+            <div className="menu"> Gallary </div>
+          </Link>
+          {/* <div className="menu"> Gallary </div> 메뉴 2 */}
         </div>
         <div className="menu-holder">
-          <div className="menu"> Reservation </div> {/*메뉴 3 */}
+          <Link
+            to="QnA-con" // 섹션의 ID를 여기에 입력
+            spy={true}
+            smooth={true}
+            offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
+            duration={500}
+          >
+            <div className="menu"> Reservation </div>
+          </Link>
+          {/* <div className="menu"> Reservation  </div> 메뉴 3 */}
         </div>
         <div className="menu-holder">
-          <div className="menu"> QnA </div> {/*메뉴 4 */}
+          <Link
+            to="map-sec" // 섹션의 ID를 여기에 입력
+            spy={true}
+            smooth={true}
+            offset={-90} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
+            duration={500}
+          >
+            <div className="menu"> Location </div>
+          </Link>
+          {/* <div className="menu"> Location </div> 메뉴 4 */}
         </div>
       </div>
       <style jsx global>{`
+        @font-face {
+          font-family: "Elice";
+          font-weight: 200;
+          src: url("/fonts/EliceDXNeolli-Medium.ttf") format("truetype");
+        }
+        @font-face {
+          font-family: "Elice-light";
+          font-weight: 200;
+          src: url("/fonts/EliceDXNeolli-Light.ttf") format("truetype");
+        }
         body {
           margin: 0;
           padding: 0;
@@ -46,8 +93,9 @@ export default function Header() {
           padding: 30px;
         }
         .menu {
-          font-size: 22px;
+          font-size: 18px;
           color: black;
+          font-family: Elice-light;
           &:hover {
             color: red;
             opacity: 0.5;
