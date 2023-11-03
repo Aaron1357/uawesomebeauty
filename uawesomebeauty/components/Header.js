@@ -16,7 +16,7 @@ export default function Header() {
           offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
           duration={500}
 >
-           <a className="menu"> About us </a>
+           <div className="menu"> About us </div>
 
          </Link>
           {/* <div className="menu"> About us </div> 메뉴 1 */}
@@ -29,7 +29,7 @@ export default function Header() {
           offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
           duration={500}
 >
-           <a className="menu"> Gallary </a>
+           <div className="menu"> Gallary </div>
 
          </Link>
           {/* <div className="menu"> Gallary </div> 메뉴 2 */}
@@ -42,7 +42,7 @@ export default function Header() {
           offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
           duration={500}
 >
-           <a className="menu"> Reservation </a>
+           <div className="menu"> Reservation </div>
 
          </Link>
           {/* <div className="menu"> Reservation  </div> 메뉴 3 */}
@@ -55,7 +55,7 @@ export default function Header() {
           offset={-20} // 스크롤 오프셋 조절 (헤더 높이에 맞게 조절)
           duration={500}
 >
-           <a className="menu"> Location </a>
+           <div className="menu"> Location </div>
 
          </Link>
           {/* <div className="menu"> Location </div> 메뉴 4 */}
